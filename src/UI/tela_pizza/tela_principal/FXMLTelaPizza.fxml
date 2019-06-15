@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="586.0" prefWidth="1148.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.tela_pizza.tela_principal.ControlerTelaPizza">
+   <children>
+      <HBox layoutY="2.0" prefHeight="25.0" prefWidth="56.0" style="-fx-background-color: Firebrick;">
+         <children>
+            <Button fx:id="butaoHome" mnemonicParsing="false" onAction="#telaHome" style="-fx-background-color: LightGray;" text="Inicial" translateX="2.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <StackPane fx:id="painel" layoutY="31.0" prefHeight="555.0" prefWidth="1148.0" />
+   </children>
+</AnchorPane>

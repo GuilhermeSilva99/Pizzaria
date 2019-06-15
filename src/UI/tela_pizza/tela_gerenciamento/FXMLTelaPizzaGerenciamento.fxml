@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.collections.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="586.0" prefWidth="1148.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.tela_pizza.tela_gerenciamento.ControlerTelaPizzaGerenciamento">
+   <children>
+      <TableView fx:id="tableViewPizza" layoutX="7.0" layoutY="12.0" prefHeight="538.0" prefWidth="573.0">
+        <columns>
+            <TableColumn fx:id="IdColuna" prefWidth="40.0" text="Id">
+                <cellValueFactory>
+                  <PropertyValueFactory property="id" />
+                </cellValueFactory>
+            </TableColumn>
+             <TableColumn prefWidth="100" text="Nome">
+                <cellValueFactory>
+                  <PropertyValueFactory property="nome" />
+                </cellValueFactory>
+             </TableColumn>
+             <TableColumn prefWidth="197.0" text="Ingredientes">
+                <cellValueFactory>
+                  <PropertyValueFactory property="ingredientes" />
+                </cellValueFactory>
+             </TableColumn>
+             <TableColumn prefWidth="78.0" text="Valor">
+                <cellValueFactory>
+                  <PropertyValueFactory property="valor" />
+                </cellValueFactory>
+             </TableColumn>
+             <TableColumn prefWidth="89.0" text="Tipo">
+                <cellValueFactory>
+                  <PropertyValueFactory property="tipo" />
+                </cellValueFactory>
+             </TableColumn>
+             <TableColumn prefWidth="68.0" text="Disponível">
+                <cellValueFactory>
+                  <PropertyValueFactory property="disponibilidade" />
+                </cellValueFactory>
+             </TableColumn>
+        </columns> 
+        <sortOrder>
+            <fx:reference source="IdColuna" />
+       </sortOrder> 
+      </TableView>
+      <AnchorPane layoutX="584.0" layoutY="18.0" prefHeight="401.0" prefWidth="559.0">
+         <children>
+            <Label layoutX="214.0" layoutY="14.0" prefHeight="39.0" prefWidth="196.0" style="-fx-background-color: black;" text="Dados da Pizza" textFill="#ffaa00">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <padding>
+                  <Insets bottom="2.0" left="26.0" right="20.0" top="2.0" />
+               </padding>
+            </Label>
+            <Label fx:id="labelNome" layoutX="19.0" layoutY="97.0" style="-fx-background-color: black;" text="Nome:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <padding>
+                  <Insets bottom="1.0" left="5.0" right="30.0" top="1.0" />
+               </padding>
+            </Label>
+            <Label fx:id="labelValor" layoutX="19.0" layoutY="134.0" prefHeight="23.0" prefWidth="84.0" style="-fx-background-color: black;" text="Valor:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <padding>
+                  <Insets bottom="1.0" left="5.0" right="5.0" top="1.0" />
+               </padding>
+            </Label>
+            <Label fx:id="labelTipo" layoutX="19.0" layoutY="172.0" prefHeight="23.0" prefWidth="82.0" style="-fx-background-color: black;" text="Tipo:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <padding>
+                  <Insets bottom="1.0" left="5.0" right="25.0" top="1.0" />
+               </padding>
+            </Label>
+            <Label fx:id="labelDisponibilidade" layoutX="19.0" layoutY="207.0" prefHeight="23.0" prefWidth="84.0" style="-fx-background-color: black;" text="Disponivel:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <padding>
+                  <Insets bottom="1.0" left="5.0" top="1.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="nome" layoutX="117.0" layoutY="95.0" prefHeight="25.0" prefWidth="430.0" />
+            <TextField fx:id="valor" layoutX="116.0" layoutY="132.0" prefHeight="25.0" prefWidth="189.0" />
+            <Button fx:id="adicionar" layoutX="7.0" layoutY="350.0" mnemonicParsing="false" onAction="#adicionar" prefHeight="30.0" prefWidth="175.0" style="-fx-background-color: black;" text="Adicionar" textFill="#00c3ff">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="remover" layoutX="192.0" layoutY="350.0" mnemonicParsing="false" onAction="#remover" prefHeight="30.0" prefWidth="175.0" style="-fx-background-color: black;" text="Remover" textFill="#00c3ff">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="atualizar" layoutX="377.0" layoutY="350.0" mnemonicParsing="false" onAction="#atualizar" prefHeight="30.0" prefWidth="175.0" style="-fx-background-color: black;" text="Atualizar" textFill="#00c3ff">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Label fx:id="labelVerificacao" layoutX="20.0" layoutY="61.0" prefHeight="23.0" prefWidth="333.0" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <padding>
+                  <Insets bottom="1.0" left="5.0" right="30.0" top="1.0" />
+               </padding>
+            </Label>
+            <Label fx:id="id" layoutX="464.0" layoutY="127.0" prefHeight="23.0" prefWidth="82.0" style="-fx-background-color: black;" text="Id --------" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <padding>
+                  <Insets bottom="1.0" left="5.0" right="5.0" top="1.0" />
+               </padding>
+            </Label>
+            <Button fx:id="limpar" layoutX="481.0" layoutY="60.0" mnemonicParsing="false" onAction="#limpar" prefHeight="16.0" prefWidth="66.0" style="-fx-background-color: black;" text="Limpar" textFill="#00c3ff">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <ChoiceBox fx:id="tipo" layoutX="117.0" layoutY="171.0" prefHeight="25.0" prefWidth="189.0" />
+            <ChoiceBox fx:id="disponibilidade" layoutX="117.0" layoutY="206.0" prefHeight="25.0" prefWidth="189.0" />
+            <Label fx:id="labelIngredientes" layoutX="19.0" layoutY="242.0" prefHeight="23.0" prefWidth="91.0" style="-fx-background-color: black;" text="Ingredients:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <padding>
+                  <Insets bottom="1.0" left="5.0" top="1.0" />
+               </padding>
+            </Label>
+            <TextArea fx:id="ingredientes" layoutX="112.0" layoutY="241.0" prefHeight="80.0" prefWidth="430.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

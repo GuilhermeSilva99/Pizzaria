@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="586.0" prefWidth="1148.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.tela_vendas.tela_entregas.ControlerTelaVendasEntregas">
+   <children>
+      <TableView fx:id="tableViewComanda" layoutX="36.0" layoutY="69.0" prefHeight="405.0" prefWidth="1074.0">
+         <columns>
+            <TableColumn fx:id="IdColuna1" prefWidth="46.0" text="Id">
+               <cellValueFactory>
+                  <PropertyValueFactory property="id" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="83.0" text="Pagamento">
+               <cellValueFactory>
+                  <PropertyValueFactory property="pagamento" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="104.0" text="Funcionario">
+               <cellValueFactory>
+                  <PropertyValueFactory property="funcionario" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="105.0" text="Cliente">
+               <cellValueFactory>
+                  <PropertyValueFactory property="cliente" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="266.0" text="Pizzas">
+               <cellValueFactory>
+                  <PropertyValueFactory property="pizzas" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn minWidth="0.0" prefWidth="130.0" text="Horário da Comanda">
+               <cellValueFactory>
+                  <PropertyValueFactory property="horario" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="267.0" text="Endereço">
+               <cellValueFactory>
+                  <PropertyValueFactory property="endereco" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn minWidth="0.0" prefWidth="70.0" text="Valor">
+               <cellValueFactory>
+                  <PropertyValueFactory property="valor" />
+               </cellValueFactory>
+            </TableColumn>
+         </columns>
+         <sortOrder>
+            <fx:reference source="IdColuna1" />
+         </sortOrder>
+      </TableView>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="259.0" layoutY="11.0" prefHeight="39.0" prefWidth="615.0" style="-fx-background-color: black;" text="Entregas de Hoje" textAlignment="CENTER" textFill="#ffaa00">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <padding>
+            <Insets bottom="2.0" left="26.0" right="20.0" top="2.0" />
+         </padding>
+      </Label>
+      <Button fx:id="botaoEntrega" layoutX="349.0" layoutY="490.0" mnemonicParsing="false" onAction="#eventoEntrega" prefHeight="49.0" prefWidth="441.0" style="-fx-background-color: black;" text="Entregue" textFill="#00c3ff">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Label fx:id="id" layoutX="1024.0" layoutY="487.0" prefHeight="23.0" prefWidth="82.0" style="-fx-background-color: black;" text="Id --------" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <padding>
+            <Insets bottom="1.0" left="5.0" right="5.0" top="1.0" />
+         </padding>
+      </Label>
+   </children>
+</AnchorPane>

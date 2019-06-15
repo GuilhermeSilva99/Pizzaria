@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="586.0" prefWidth="1148.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.tela_vendas.tela_gerenciamento.ControlerTelaVendasGerenciamento">
+   <children>
+       <TableView fx:id="tableViewComanda" layoutX="7.0" layoutY="12.0" prefHeight="538.0" prefWidth="573.0">
+        <columns>
+            <TableColumn fx:id="IdColuna" prefWidth="40.0" text="Id">
+                <cellValueFactory>
+                  <PropertyValueFactory property="id" />
+                </cellValueFactory>
+            </TableColumn>
+             <TableColumn prefWidth="77.0" text="Pagamento">
+                <cellValueFactory>
+                  <PropertyValueFactory property="pagamento" />
+                </cellValueFactory>
+             </TableColumn>
+             <TableColumn prefWidth="72.0" text="Funcionario">
+                <cellValueFactory>
+                  <PropertyValueFactory property="funcionario" />
+                </cellValueFactory>
+             </TableColumn>
+             <TableColumn prefWidth="88.0" text="Cliente">
+                <cellValueFactory>
+                  <PropertyValueFactory property="cliente" />
+                </cellValueFactory>
+             </TableColumn>
+             <TableColumn prefWidth="160.0" text="Pizzas">
+                <cellValueFactory>
+                  <PropertyValueFactory property="pizzas" />
+                </cellValueFactory>
+             </TableColumn>
+             <TableColumn prefWidth="56.0" text="Entrega">
+                <cellValueFactory>
+                  <PropertyValueFactory property="entrega" />
+                </cellValueFactory>
+             </TableColumn>
+             <TableColumn prefWidth="75.0" text="Valor">
+                <cellValueFactory>
+                  <PropertyValueFactory property="valor" />
+                </cellValueFactory>
+             </TableColumn>
+        </columns> 
+        <sortOrder>
+            <fx:reference source="IdColuna" />
+       </sortOrder> 
+      </TableView>
+      <AnchorPane layoutX="585.0" layoutY="3.0" prefHeight="556.0" prefWidth="560.0">
+         <children>
+            <Label layoutX="189.0" layoutY="18.0" prefHeight="39.0" prefWidth="231.0" style="-fx-background-color: black;" text="Dados da Comanda" textFill="#ffaa00">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <padding>
+                  <Insets bottom="2.0" left="26.0" right="20.0" top="2.0" />
+               </padding>
+            </Label>
+            <Label layoutX="7.0" layoutY="97.0" prefHeight="23.0" prefWidth="93.0" style="-fx-background-color: black;" text="Pagamento:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <padding>
+                  <Insets bottom="1.0" left="5.0" right="1.0" top="1.0" />
+               </padding>
+            </Label>
+            <Button fx:id="adicionar" layoutX="32.0" layoutY="517.0" mnemonicParsing="false" onAction="#adicionar" prefHeight="30.0" prefWidth="219.0" style="-fx-background-color: black;" text="Adicionar" textFill="#00c3ff">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="remover" layoutX="282.0" layoutY="517.0" mnemonicParsing="false" onAction="#remover" prefHeight="30.0" prefWidth="219.0" style="-fx-background-color: black;" text="Remover" textFill="#00c3ff">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Label fx:id="labelVerificacao" layoutX="10.0" layoutY="64.0" prefHeight="23.0" prefWidth="333.0" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <padding>
+                  <Insets bottom="1.0" left="5.0" right="30.0" top="1.0" />
+               </padding>
+            </Label>
+            <Label fx:id="id" layoutX="472.0" layoutY="380.0" prefHeight="23.0" prefWidth="80.0" style="-fx-background-color: black;" text="Id --------" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <padding>
+                  <Insets bottom="1.0" left="5.0" right="5.0" top="1.0" />
+               </padding>
+            </Label>
+            <Button fx:id="limpar" layoutX="489.0" layoutY="60.0" mnemonicParsing="false" onAction="#limpar" prefHeight="16.0" prefWidth="66.0" style="-fx-background-color: black;" text="Limpar" textFill="#00c3ff">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <ChoiceBox fx:id="pagamento" layoutX="104.0" layoutY="96.0" prefHeight="25.0" prefWidth="154.0" />
+            <Label fx:id="labelFuncionario" layoutX="266.0" layoutY="97.0" prefHeight="23.0" prefWidth="100.0" style="-fx-background-color: black;" text="Funcionario:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <padding>
+                  <Insets bottom="1.0" left="5.0" right="1.0" top="1.0" />
+               </padding>
+            </Label>
+            <ChoiceBox fx:id="funcionarios" layoutX="370.0" layoutY="95.0" prefHeight="25.0" prefWidth="186.0" />
+            <TableView fx:id="tableViewPizza" layoutX="7.0" layoutY="132.0" prefHeight="207.0" prefWidth="548.0">
+              <columns>
+                <TableColumn fx:id="IdColuna2" prefWidth="40.0" text="Id">
+                    <cellValueFactory>
+                      <PropertyValueFactory property="id" />
+                    </cellValueFactory>
+                </TableColumn>
+                 <TableColumn prefWidth="185.0" text="Nome">
+                    <cellValueFactory>
+                      <PropertyValueFactory property="nome" />
+                    </cellValueFactory>
+                 </TableColumn>
+                 <TableColumn prefWidth="239.0" text="Descricao">
+                    <cellValueFactory>
+                      <PropertyValueFactory property="ingredientes" />
+                    </cellValueFactory>
+                 </TableColumn>
+                 <TableColumn prefWidth="83.0" text="Valor">
+                    <cellValueFactory>
+                      <PropertyValueFactory property="valor" />
+                    </cellValueFactory>
+                 </TableColumn>
+            </columns> 
+            <sortOrder>
+                <fx:reference source="IdColuna2" />
+           </sortOrder> 
+            </TableView>
+            <Button fx:id="adicionarPizza" layoutX="7.0" layoutY="346.0" mnemonicParsing="false" onAction="#adicionarPizza" prefHeight="17.0" prefWidth="263.0" style="-fx-background-color: black;" text="Adicionar Pizza a Comanda" textFill="#00c3ff">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <ChoiceBox fx:id="pizzas" layoutX="121.0" layoutY="380.0" prefHeight="25.0" prefWidth="349.0" />
+            <Label fx:id="labelPizzas" layoutX="7.0" layoutY="381.0" prefHeight="23.0" prefWidth="109.0" style="-fx-background-color: black;" text="Pizzas Pedido:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <padding>
+                  <Insets bottom="1.0" left="5.0" right="1.0" top="1.0" />
+               </padding>
+            </Label>
+            <Label layoutX="273.0" layoutY="347.0" prefHeight="23.0" prefWidth="146.0" style="-fx-background-color: black;" text="Valor da Comanda:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <padding>
+                  <Insets bottom="1.0" left="5.0" right="1.0" top="1.0" />
+               </padding>
+            </Label>
+            <Label fx:id="labelValor" layoutX="422.0" layoutY="347.0" prefHeight="23.0" prefWidth="130.0" style="-fx-background-color: black;" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <padding>
+                  <Insets bottom="1.0" left="5.0" right="1.0" top="1.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="cliente" layoutX="140.0" layoutY="415.0" prefHeight="25.0" prefWidth="263.0" />
+            <Label fx:id="labelCliente" layoutX="7.0" layoutY="416.0" prefHeight="23.0" prefWidth="130.0" style="-fx-background-color: black;" text="Nome do Cliente:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <padding>
+                  <Insets bottom="1.0" left="5.0" right="1.0" top="1.0" />
+               </padding>
+            </Label>
+            <Label fx:id="labelEntrega" layoutX="409.0" layoutY="416.0" prefHeight="23.0" prefWidth="66.0" style="-fx-background-color: black;" text="Entrega:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <padding>
+                  <Insets bottom="1.0" left="5.0" right="1.0" top="1.0" />
+               </padding>
+            </Label>
+            <ChoiceBox fx:id="entrega" layoutX="479.0" layoutY="415.0" prefHeight="25.0" prefWidth="73.0" />
+            <Label fx:id="labelCidade" layoutX="6.0" layoutY="448.0" prefHeight="23.0" prefWidth="60.0" style="-fx-background-color: black;" text="Cidade:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <padding>
+                  <Insets bottom="1.0" left="5.0" right="1.0" top="1.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="cidade" layoutX="70.0" layoutY="447.0" prefHeight="25.0" prefWidth="219.0" />
+            <Label fx:id="labelRua" layoutX="296.0" layoutY="448.0" prefHeight="23.0" prefWidth="40.0" style="-fx-background-color: black;" text="Rua:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <padding>
+                  <Insets bottom="1.0" left="5.0" right="1.0" top="1.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="rua" layoutX="340.0" layoutY="447.0" prefHeight="25.0" prefWidth="212.0" />
+            <Label fx:id="labelNumero" layoutX="373.0" layoutY="482.0" prefHeight="23.0" prefWidth="73.0" style="-fx-background-color: black;" text="Número:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <padding>
+                  <Insets bottom="1.0" left="5.0" right="1.0" top="1.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="numero" layoutX="451.0" layoutY="481.0" prefHeight="25.0" prefWidth="100.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

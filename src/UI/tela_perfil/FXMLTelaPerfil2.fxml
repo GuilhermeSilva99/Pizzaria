@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="414.0" prefWidth="531.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.tela_perfil.ControlerTelaPerfil2">
+   <children>
+      <Label layoutX="166.0" layoutY="14.0" prefHeight="39.0" prefWidth="199.0" style="-fx-background-color: black;" text="Dados do Perfil" textFill="#ffaa00">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <padding>
+            <Insets bottom="2.0" left="26.0" right="20.0" top="2.0" />
+         </padding>
+      </Label>
+      <TextField fx:id="senha" layoutX="100.0" layoutY="172.0" prefHeight="25.0" prefWidth="407.0" />
+      <Label fx:id="labelSenha" layoutX="10.0" layoutY="172.0" prefHeight="23.0" prefWidth="83.0" style="-fx-background-color: black;" text="Senha:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <padding>
+            <Insets bottom="1.0" left="5.0" right="25.0" top="1.0" />
+         </padding>
+      </Label>
+      <TextField fx:id="email" layoutX="100.0" layoutY="132.0" prefHeight="25.0" prefWidth="407.0" />
+      <TextField fx:id="nome" layoutX="100.0" layoutY="92.0" prefHeight="25.0" prefWidth="407.0" />
+      <Label fx:id="labelNome" layoutX="10.0" layoutY="92.0" style="-fx-background-color: black;" text="Nome:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <padding>
+            <Insets bottom="1.0" left="5.0" right="30.0" top="1.0" />
+         </padding>
+      </Label>
+      <Label fx:id="labelEmail" layoutX="10.0" layoutY="132.0" prefHeight="23.0" prefWidth="83.0" style="-fx-background-color: black;" text="Email:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <padding>
+            <Insets bottom="1.0" left="5.0" right="25.0" top="1.0" />
+         </padding>
+      </Label>
+      <Label fx:id="labelVerificacao" layoutX="14.0" layoutY="53.0" prefHeight="23.0" prefWidth="333.0" textFill="RED">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <padding>
+            <Insets bottom="1.0" left="5.0" right="30.0" top="1.0" />
+         </padding>
+      </Label>
+      <Button fx:id="atualizar" layoutX="173.0" layoutY="379.0" mnemonicParsing="false" onAction="#atualizar" prefHeight="30.0" prefWidth="185.0" style="-fx-background-color: black;" text="Atualizar" textFill="#00c3ff">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="labelCpf" layoutX="10.0" layoutY="212.0" prefHeight="23.0" prefWidth="83.0" style="-fx-background-color: black;" text="Cpf:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <padding>
+            <Insets bottom="1.0" left="5.0" right="25.0" top="1.0" />
+         </padding>
+      </Label>
+      <TextField fx:id="cpf" layoutX="100.0" layoutY="212.0" prefHeight="25.0" prefWidth="407.0" />
+      <Label fx:id="labelCidade" layoutX="10.0" layoutY="252.0" prefHeight="23.0" prefWidth="83.0" style="-fx-background-color: black;" text="Cidade:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <padding>
+            <Insets bottom="1.0" left="5.0" right="25.0" top="1.0" />
+         </padding>
+      </Label>
+      <TextField fx:id="cidade" layoutX="100.0" layoutY="252.0" prefHeight="25.0" prefWidth="407.0" />
+      <Label fx:id="labelRua" layoutX="10.0" layoutY="292.0" prefHeight="23.0" prefWidth="83.0" style="-fx-background-color: black;" text="Rua:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <padding>
+            <Insets bottom="1.0" left="5.0" right="25.0" top="1.0" />
+         </padding>
+      </Label>
+      <TextField fx:id="rua" layoutX="100.0" layoutY="292.0" prefHeight="25.0" prefWidth="407.0" />
+      <Label fx:id="labelNumero" layoutX="10.0" layoutY="332.0" prefHeight="23.0" prefWidth="83.0" style="-fx-background-color: black;" text="Número:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <padding>
+            <Insets bottom="1.0" left="5.0" right="10.0" top="1.0" />
+         </padding>
+      </Label>
+      <TextField fx:id="numero" layoutX="100.0" layoutY="332.0" prefHeight="25.0" prefWidth="407.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="1200.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.tela_principal.ControlerTelaPrincipal">
+    <children>
+      <StackPane layoutX="1.0" layoutY="74.0" prefHeight="586.0" prefWidth="1200.0">
+         <effect>
+            <ImageInput>
+               <source>
+                  <Image url="file:/C:/Users/Felipe/Documents/NetBeansProjects/poo/img3.jpg" />
+               </source>
+            </ImageInput>
+         </effect>
+      </StackPane>
+      <HBox layoutX="28.0" layoutY="76.0" opacity="0.55" prefHeight="582.0" prefWidth="1146.0" style="-fx-background-color: black;" />
+      <StackPane fx:id="stack" layoutX="29.0" layoutY="74.0" prefHeight="586.0" prefWidth="1148.0" style="-fx-background-image: url=img1.jpg;" />
+      <HBox layoutY="-3.0" prefHeight="19.0" prefWidth="1200.0" style="-fx-background-color: Goldenrod;">
+         <padding>
+            <Insets left="15.0" top="5.0" />
+         </padding>
+         <children>
+            <Label prefHeight="43.0" prefWidth="963.0" text="Pizzaria  ........................................................................................" textAlignment="RIGHT" textFill="#111110">
+               <font>
+                  <Font name="System Bold Italic" size="36.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" top="-5.0" />
+               </padding>
+            </Label>
+         </children>
+      </HBox>
+      <HBox layoutY="48.0" prefHeight="25.0" prefWidth="1200.0" style="-fx-background-color: Firebrick;">
+         <children>
+            <Button fx:id="vendas" mnemonicParsing="false" onAction="#telaInicial" style="-fx-background-color: LightGray;" text="Comanda" translateX="2.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button fx:id="pizza" onAction="#telaPizza" style="-fx-background-color: LightGray;" text="Pizza" translateX="5.0">
+               <HBox.margin>
+                  <Insets left="2.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="funcionario" mnemonicParsing="false" onAction="#telaFuncionario" style="-fx-background-color: LightGray;" text="Funcionario" translateX="11.0">
+               <HBox.margin>
+                  <Insets left="-1.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="cargo" mnemonicParsing="false" onAction="#telaCargo" style="-fx-background-color: LightGray;" text="Cargo" translateX="16.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <Label fx:id="labelNome" layoutX="965.0" layoutY="48.0" prefHeight="25.0" prefWidth="235.0" style="-fx-background-color: black;" textFill="#fff6f6">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+         <padding>
+            <Insets left="8.0" />
+         </padding>
+      </Label>
+      <Button fx:id="perfil" layoutX="1145.0" layoutY="5.0" mnemonicParsing="false" onAction="#telaPerfil" style="-fx-background-color: LightGray;" text="Perfil">
+          <font>
+            <Font name="System Bold" size="12.0" />
+          </font>
+      </Button>
+    </children>
+</AnchorPane>

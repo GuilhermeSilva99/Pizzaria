@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="586.0" prefWidth="1148.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.tela_cargo.ControlerTelaCargo">
+   <children>
+      <TableView fx:id="tableViewCargo" layoutX="7.0" layoutY="12.0" prefHeight="538.0" prefWidth="492.0">
+        <columns>
+            <TableColumn fx:id="IdColuna" prefWidth="40.0" text="Id">
+                <cellValueFactory>
+                  <PropertyValueFactory property="id" />
+                </cellValueFactory>
+            </TableColumn>
+             <TableColumn prefWidth="130.0" text="Nome">
+                <cellValueFactory>
+                  <PropertyValueFactory property="nome" />
+                </cellValueFactory>
+             </TableColumn>
+             <TableColumn prefWidth="239.0" text="Descrição">
+                <cellValueFactory>
+                  <PropertyValueFactory property="descricao" />
+                </cellValueFactory>
+             </TableColumn>
+             <TableColumn prefWidth="77.0" text="Salário">
+                <cellValueFactory>
+                  <PropertyValueFactory property="salario" />
+                </cellValueFactory>
+             </TableColumn>
+        </columns> 
+        <sortOrder>
+            <fx:reference source="IdColuna" />
+       </sortOrder> 
+      </TableView>
+      <AnchorPane layoutX="518.0" layoutY="55.0" prefHeight="304.0" prefWidth="630.0">
+         <children>
+            <Label layoutX="214.0" layoutY="14.0" prefHeight="39.0" prefWidth="203.0" style="-fx-background-color: black;" text="Dados do Cargo" textFill="#ffaa00">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <padding>
+                  <Insets bottom="2.0" left="26.0" right="20.0" top="2.0" />
+               </padding>
+            </Label>
+            <Label fx:id="labelNome" layoutX="19.0" layoutY="97.0" style="-fx-background-color: black;" text="Nome:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <padding>
+                  <Insets bottom="1.0" left="5.0" right="30.0" top="1.0" />
+               </padding>
+            </Label>
+            <Label fx:id="labelDescricao" layoutX="19.0" layoutY="134.0" prefHeight="23.0" prefWidth="84.0" style="-fx-background-color: black;" text="Descrição:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <padding>
+                  <Insets bottom="1.0" left="5.0" right="5.0" top="1.0" />
+               </padding>
+            </Label>
+            <Label fx:id="labelSalario" layoutX="19.0" layoutY="172.0" style="-fx-background-color: black;" text="Salário:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <padding>
+                  <Insets bottom="1.0" left="5.0" right="25.0" top="1.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="nome" layoutX="117.0" layoutY="95.0" prefHeight="25.0" prefWidth="490.0" />
+            <TextField fx:id="descricao" layoutX="116.0" layoutY="132.0" prefHeight="25.0" prefWidth="490.0" />
+            <TextField fx:id="salario" layoutX="116.0" layoutY="170.0" prefHeight="25.0" prefWidth="490.0" />
+            <Button fx:id="adicionar" layoutX="18.0" layoutY="258.0" mnemonicParsing="false" onAction="#adicionar" prefHeight="30.0" prefWidth="185.0" style="-fx-background-color: black;" text="Adicionar" textFill="#00c3ff">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="remover" layoutX="217.0" layoutY="258.0" mnemonicParsing="false" onAction="#remover" prefHeight="30.0" prefWidth="185.0" style="-fx-background-color: black;" text="Remover" textFill="#00c3ff">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="atualizar" layoutX="417.0" layoutY="258.0" mnemonicParsing="false" onAction="#atualizar" prefHeight="30.0" prefWidth="185.0" style="-fx-background-color: black;" text="Atualizar" textFill="#00c3ff">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Label fx:id="labelVerificacao" layoutX="20.0" layoutY="61.0" prefHeight="23.0" prefWidth="333.0" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <padding>
+                  <Insets bottom="1.0" left="5.0" right="30.0" top="1.0" />
+               </padding>
+            </Label>
+            <Label fx:id="id" layoutX="524.0" layoutY="207.0" prefHeight="23.0" prefWidth="82.0" style="-fx-background-color: black;" text="Id --------" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <padding>
+                  <Insets bottom="1.0" left="5.0" right="5.0" top="1.0" />
+               </padding>
+            </Label>
+            <Button fx:id="limpar" layoutX="542.0" layoutY="58.0" mnemonicParsing="false" onAction="#limpar" prefHeight="16.0" prefWidth="66.0" style="-fx-background-color: black;" text="Limpar" textFill="#00c3ff">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

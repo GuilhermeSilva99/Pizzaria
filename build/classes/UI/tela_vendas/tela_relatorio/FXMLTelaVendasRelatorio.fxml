@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="586.0" prefWidth="1148.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.tela_vendas.tela_relatorio.ControlerTelaVendasRelatorio">
+   <children>
+      <TableView fx:id="tableViewRelatorioComanda" layoutX="8.0" layoutY="61.0" prefHeight="476.0" prefWidth="371.0">
+         <columns>
+            <TableColumn fx:id="IdColuna" prefWidth="40.0" text="Id">
+               <cellValueFactory>
+                  <PropertyValueFactory property="id" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="103.0" text="Data">
+               <cellValueFactory>
+                  <PropertyValueFactory property="data" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="150.0" text="Quantidade de Comandas">
+               <cellValueFactory>
+                  <PropertyValueFactory property="quantidade" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="75.0" text="Valor">
+               <cellValueFactory>
+                  <PropertyValueFactory property="valor" />
+               </cellValueFactory>
+            </TableColumn>
+         </columns>
+         <sortOrder>
+            <fx:reference source="IdColuna" />
+         </sortOrder>
+      </TableView>
+      <AnchorPane layoutX="384.0" layoutY="16.0" prefHeight="550.0" prefWidth="758.0">
+         <children>
+            <Label layoutX="189.0" layoutY="18.0" prefHeight="39.0" prefWidth="231.0" style="-fx-background-color: black;" text="Dados da Comanda" textFill="#ffaa00">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <padding>
+                  <Insets bottom="2.0" left="26.0" right="20.0" top="2.0" />
+               </padding>
+            </Label>
+            <Label layoutX="8.0" layoutY="89.0" prefHeight="23.0" prefWidth="107.0" style="-fx-background-color: black;" text="Data:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <padding>
+                  <Insets bottom="1.0" left="5.0" right="1.0" top="1.0" />
+               </padding>
+            </Label>
+            <Label layoutX="8.0" layoutY="129.0" prefHeight="23.0" prefWidth="107.0" style="-fx-background-color: black;" text="Nº Comandas:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <padding>
+                  <Insets bottom="1.0" left="5.0" right="1.0" top="1.0" />
+               </padding>
+            </Label>
+            <Label layoutX="8.0" layoutY="169.0" prefHeight="23.0" prefWidth="107.0" style="-fx-background-color: black;" text="Valor Total:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <padding>
+                  <Insets bottom="1.0" left="5.0" right="1.0" top="1.0" />
+               </padding>
+            </Label>
+            <Label fx:id="data" layoutX="121.0" layoutY="88.0" prefHeight="23.0" prefWidth="197.0" style="-fx-background-color: black;" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <padding>
+                  <Insets bottom="1.0" left="5.0" right="1.0" top="1.0" />
+               </padding>
+            </Label>
+            <Label fx:id="quantidade" layoutX="121.0" layoutY="129.0" prefHeight="23.0" prefWidth="83.0" style="-fx-background-color: black;" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <padding>
+                  <Insets bottom="1.0" left="5.0" right="1.0" top="1.0" />
+               </padding>
+            </Label>
+            <Label fx:id="valor" layoutX="121.0" layoutY="169.0" prefHeight="23.0" prefWidth="197.0" style="-fx-background-color: black;" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <padding>
+                  <Insets bottom="1.0" left="5.0" right="1.0" top="1.0" />
+               </padding>
+            </Label>
+            <TableView fx:id="tableViewComanda" layoutX="7.0" layoutY="209.0" prefHeight="313.0" prefWidth="748.0">
+               <columns>
+                  <TableColumn fx:id="IdColuna1" prefWidth="40.0" text="Id">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="id" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn prefWidth="77.0" text="Pagamento">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="pagamento" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn prefWidth="107.0" text="Funcionario">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="funcionario" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn prefWidth="102.0" text="Cliente">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="cliente" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn prefWidth="161.0" text="Pizzas">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="pizzas" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn prefWidth="57.0" text="Entrega">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="entrega" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn prefWidth="140.0" text="Endereço">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="endereco" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn minWidth="0.0" prefWidth="61.0" text="Valor">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="valor" />
+                     </cellValueFactory>
+                  </TableColumn>
+               </columns>
+               <sortOrder>
+                  <fx:reference source="IdColuna1" />
+               </sortOrder>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <Button fx:id="busca" layoutX="196.0" layoutY="21.0" mnemonicParsing="false" onAction="#buscarRelatorio" prefHeight="29.0" prefWidth="70.0" style="-fx-background-color: black;" text="Buscar" textFill="#00c3ff">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <DatePicker fx:id="dataBusca" layoutX="14.0" layoutY="25.0" />
+      <Button fx:id="atualizar" layoutX="303.0" layoutY="29.0" mnemonicParsing="false" onAction="#reset" prefHeight="29.0" prefWidth="76.0" style="-fx-background-color: black;" text="atualizar" textFill="#00c3ff">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
